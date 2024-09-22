@@ -1,0 +1,9 @@
+# Create a directory for the storage pool
+sudo mkdir -p /var/lib/libvirt/images
+
+# Define a new storage pool using virsh
+sudo virsh pool-define-as default dir - - - - "/var/lib/libvirt/images"
+
+# Start and autostart the pool
+sudo virsh pool-start default
+sudo virsh pool-autostart default

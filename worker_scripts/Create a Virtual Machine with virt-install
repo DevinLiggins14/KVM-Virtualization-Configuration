@@ -1,0 +1,30 @@
+#Download the CentOS 9 ISO:
+
+#Make sure you have the CentOS 9 ISO file downloaded. For this demo, we'll assume it is located at /var/lib/libvirt/boot/CentOS-9-GenericCloud.iso.
+#If not downloaded, you can use curl or wget to download it:
+
+
+sudo wget -O /var/lib/libvirt/boot/CentOS-9-GenericCloud.iso https://cloud.centos.org
+
+#Create a Storage Volume for the VM:
+
+#Use the virsh command to create a new disk image:
+
+sudo virsh vol-create-as --pool default --name centos9-vm.qcow2 --capacity 20G --format qc
+
+#Create the Virtual Machine with virt-install:
+
+#Use the virt-install command to create the VM with basic configurations:
+
+sudo virt-install \
+--name centos9-vm \
+--ram 2048 \
+--vcpus 2 \
+--disk path=/var/lib/libvirt/images/centos9-vm.qcow2,size=20 \
+--os-type linux \
+--os-variant centos-stream9 \
+--network bridge=br0,model=virtio \
+--graphics none \
+--console pty,target_type=serial \
+--cdrom /var/lib/libvirt/boot/CentOS-9-GenericCloud.iso \
+--boot menu=on

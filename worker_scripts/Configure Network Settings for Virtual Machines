@@ -1,0 +1,32 @@
+# Create the Network Configuration File for the bridged network
+sudo tee /etc/libvirt/qemu/networks/br0.xml <<EOF
+<network>
+  <name>br0</name>
+  <bridge name='br0' />
+  <forward mode='bridge'/>
+</network>
+EOF
+
+# Create the Bridge Interface on the Host
+sudo nmcli connection add type bridge ifname br0
+
+# Set a Static IP for the Bridge Interface (optional)
+sudo nmcli connection modify bridge-br0 ipv4.method manual ipv4.addresses "192.168.122.1/24"
+
+# Bring the Bridge Interface Up
+sudo nmcli connection up bridge-br0
+
+# Define the Network in libvirt
+sudo virsh net-define /etc/libvirt/qemu/networks/br0.xml
+
+# Start the Network
+sudo virsh net-start br0
+
+# Set the Network to Start Automatically on Boot
+sudo virsh net-autostart br0
+
+# Verify the Network Configuration in libvirt
+sudo virsh net-list --all
+
+# Verify the Bridge Interface on the Host
+ip addr show br0

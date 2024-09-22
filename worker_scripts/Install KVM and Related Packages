@@ -1,0 +1,2 @@
+sudo yum install -y qemu-kvm libvirt libvirt-daemon libvirt-daemon-config-network libvirt-daemon-kvm virt-install virt-manager
+sudo systemctl enable --now libvirtd

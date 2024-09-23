@@ -44,7 +44,7 @@ virsh pool-autostart: Ensures the pool starts on boot. <br/>
  <br /> 
  <br/> Add configurations  <br/>
  <img src="https://github.com/user-attachments/assets/546741b7-3f96-444a-b417-330baa531577"/>
-  <br /> Attach newly created disk volume and configure disk image formats <br/>
+  <br /> Attach newly created disk volume and configure disk image formats and confirm <br/>
  <img src="https://github.com/user-attachments/assets/278a4f3b-f9e4-4fc2-bf51-b6de0a5f7b55"/>
  <br /> 
  <br/>   <br/>

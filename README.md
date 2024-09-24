@@ -26,16 +26,20 @@ libvirt-daemon-*: Daemon configurations for network and KVM support.
 virt-install: CLI tool for creating VMs.
 virt-manager: GUI tool for managing VMs.
 systemctl enable --now libvirtd: Enables and starts the libvirt service. <br/>
+  <br/> Type virt-manager to pull up the GUI <br/> 
+  <img src="https://github.com/user-attachments/assets/2ce07ab2-217a-4720-a841-49ffce57f660"/>
   <br/> Run lscpu to verify hardware support for virtualization <br/>
  <img src="https://github.com/user-attachments/assets/10dde927-f164-4728-be57-b313788552c8"/>
   <br/> Now create a storage pool for virtual machine disk images <br/>
   <img src="https://github.com/user-attachments/assets/6d614805-ed7e-496b-a5f7-982cfd30d212"/>
+  <img src="https://github.com/user-attachments/assets/358249fe-7f3c-4f7a-bbe4-e693b9bff4e8"/>
   <br/> mkdir -p /var/lib/libvirt/images: Creates a directory for storage.
 virsh pool-define-as: Defines a storage pool with type dir.
 virsh pool-start: Starts the storage pool.
 virsh pool-autostart: Ensures the pool starts on boot. <br/>
   <br/> Now configure network settings for virtual machines  <br/> 
   <img src="https://github.com/user-attachments/assets/c52f2191-2ac9-4be5-9b27-2cbc891f3e01"/>
+  <img src="https://github.com/user-attachments/assets/e6edf3a8-2149-4ba5-8181-f0c0c3c717da"/>
 <br /> Now create a virtual machine using virtsh, virt manager, or virt-install <br/>
  <img src="https://github.com/user-attachments/assets/67c17b49-6dcb-40dd-83c4-96a47c2cd07a"/>
  <br /> 
@@ -54,6 +58,11 @@ virsh pool-autostart: Ensures the pool starts on boot. <br/>
  <img src="https://github.com/user-attachments/assets/fdf58c62-d024-4a54-b18b-ae74957f76d2"/>
 <img src="https://github.com/user-attachments/assets/2a88e6cd-010f-4321-abd6-927077abc17b"/>
 <img src="https://github.com/user-attachments/assets/bbe53e44-fe8d-4493-be9c-ca7633e7ae26"/>
+  <br /> If you right click and select migrate and get this screen its because you need to have a second host <br/>
+ <img src="https://github.com/user-attachments/assets/195aa228-dddc-40cf-a88a-2b14fa05b9a6"/>
+ <br /> 
+ <br/>  Make sure that xml editing is enabled in prefrences <br/>
+ <img src="https://github.com/user-attachments/assets/f3e0d307-f94c-40cb-8b9b-b5de7c651408"/>
   <br />  <br/>
  <img src=""/>
  <br /> 
@@ -62,15 +71,15 @@ virsh pool-autostart: Ensures the pool starts on boot. <br/>
  <img src=""/>
  <br /> 
  <br/>   <br/>
- <img src=""/><br />  <br/>
  <img src=""/>
+  <br/>
+  <br /> Run to follow SELinux policies <br/>
+ <img src="https://github.com/user-attachments/assets/cd6183ef-9a83-4942-bfdb-2fb7cf64a3c1"/>
  <br /> 
- <br/>   <br/>
- <img src=""/><br />  <br/>
- <img src=""/>
- <br /> 
- <br/>   <br/>
- <img src=""/><br />  <br/>
+ <br/> Ensure specific ports are open for VMs  <br/>
+ <img src="https://github.com/user-attachments/assets/fd5db74e-847e-405d-80b7-483f63acf6c0"/>
+ <br/>
+ <br />  <br/>
  <img src=""/>
  <br /> 
  <br/>   <br/>

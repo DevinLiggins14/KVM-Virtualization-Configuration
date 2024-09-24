@@ -48,9 +48,12 @@ virsh pool-autostart: Ensures the pool starts on boot. <br/>
  <img src="https://github.com/user-attachments/assets/546741b7-3f96-444a-b417-330baa531577"/>
   <br /> Attach newly created disk volume and configure disk image formats and confirm <br/>
  <img src="https://github.com/user-attachments/assets/278a4f3b-f9e4-4fc2-bf51-b6de0a5f7b55"/>
+  <img src="https://github.com/user-attachments/assets/0d1ca449-1e80-4ad6-a81c-0f5c39e105de"/>
  <br /> 
- <br/>   <br/>
- <img src=""/>
+ <br/> Right click the VM in the manager and click open to view the menu to configure memory allocation and cpu <br/>
+ <img src="https://github.com/user-attachments/assets/fdf58c62-d024-4a54-b18b-ae74957f76d2"/>
+<img src="https://github.com/user-attachments/assets/2a88e6cd-010f-4321-abd6-927077abc17b"/>
+<img src="https://github.com/user-attachments/assets/bbe53e44-fe8d-4493-be9c-ca7633e7ae26"/>
   <br />  <br/>
  <img src=""/>
  <br /> 

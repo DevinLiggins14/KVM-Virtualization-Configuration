@@ -1,0 +1,11 @@
+# Install GNOME Desktop
+sudo yum groupinstall "Server with GUI" -y
+
+# Enable the graphical target to start the GUI by default
+sudo systemctl set-default graphical.target
+
+# Start the graphical interface
+sudo systemctl start graphical.target
+
+# Reboot to apply changes
+sudo reboot

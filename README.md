@@ -15,7 +15,9 @@ Bash
 
 <h2>Project walk-through:</h2>
 <p align="center">
-  <br/> First install all KVM related packages on CentOS and start the libvirt service <br/>
+  <br/> Install the GNOME desktop to access the CentOS GUI if not installed <br/>
+  <img src="https://github.com/user-attachments/assets/e4d886d1-345a-4b74-8faf-eb5b5c39f18e"/>
+  <br/> Next install all KVM related packages on CentOS and start the libvirt service <br/>
 <img src="https://github.com/user-attachments/assets/3078bf3a-e814-4f7b-b7cf-182414ab6df8"/>
   <br/> Explanation:
 qemu-kvm: KVM package for QEMU, the hypervisor.
